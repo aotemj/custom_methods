@@ -1,6 +1,6 @@
 // 自定义 map js map 函数
 const customMap = function () {
-    const args = arguments, l = arr.length
+    const args = arguments, l = this.length
     const arr = this
     if (!args.length || typeof args[0] !== 'function') {
         throw Error('map need a function as a param')
@@ -12,7 +12,7 @@ const customMap = function () {
     return mappedArr
 }
 
-Array.prototype.customMap = customMap;
+Array.prototype.map = customMap;
 
-const newArr = [1, 2, 3].customMap((item) => item * 2)
+const newArr = [1, 2, 3].map((item) => item * 2)
 console.log(newArr);
