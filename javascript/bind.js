@@ -1,4 +1,4 @@
-// 自定义 map js map 函数
+// 自定义 bind 函数
 function customBind() {
     const arg = arguments
     const self = this
