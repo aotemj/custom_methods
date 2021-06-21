@@ -14,16 +14,16 @@ function customBind() {
 }
 
 // 这里有个疑问：直接赋值 Function.prototype.bind = customBind 和 在 Function 的 prototype 上添加新的 customBind 方法，所执行的结果并不相同
-// Function.prototype.customBind = customBind
-Function.prototype.bind = customBind
+Function.prototype.customBind = customBind
+// Function.prototype.bind = customBind
 
 let obj = {
     a: 1
 }
 
-function testFn(x, y) {
+function testFn() {
     console.log(this)
-    console.log(x, y)
+    console.log(arguments)
 }
 
 // const fn = testFn.customBind(obj, 1, 2, 3)
