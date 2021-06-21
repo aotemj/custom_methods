@@ -3,9 +3,11 @@
 function customApply() {
     let self = this, args = arguments
     return (function () {
-        const [_this, remainder] = args
+        const [_this, remainder] = args;
 
-        return self.bind(_this, ...remainder)()
+        _this.__proto__.fn = self;
+        _this.fn(...remainder);
+        delete _this.__proto__.fn;
     })()
 }
 
@@ -13,6 +15,7 @@ Function.prototype.apply = customApply
 
 function applyFunction() {
     console.log("apply test");
+    console.log(arguments)
 }
 
 const obj = {
