@@ -23,4 +23,4 @@ function testFn () {
 }
 
 const res = testFn.call(obj, 1, 2, 4, 5)
-console.log(res);
+console.log(res)
