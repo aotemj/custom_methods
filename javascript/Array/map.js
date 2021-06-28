@@ -1,13 +1,13 @@
 // 自定义 map js map 函数
 const customMap = function () {
-  const args = arguments; const l = this.length
-  const arr = this
-  if (!args.length || typeof args[0] !== 'function') {
+  const [callback] = arguments
+  const l = this.length
+  if (!(callback instanceof Function)) {
     throw Error('map need a function as a param')
   }
   const mappedArr = []
   for (let i = 0; i < l; i++) {
-    mappedArr.push(args[0](arr[i]))
+    mappedArr[mappedArr.length] = callback(this[i], i, this)
   }
   return mappedArr
 }
