@@ -1,7 +1,7 @@
 /**
  * 冒泡排序
- * @param arr
- * @param direction
+ * @param arr 待排序数组
+ * @param direction asc: 升序 desc: 降序
  */
 function bubbleSort (arr, direction = 'asc') {
   const l = arr.length
