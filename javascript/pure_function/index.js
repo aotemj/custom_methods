@@ -61,12 +61,13 @@ const searchByKeyword = async e => {
 // 3. 异步： 非纯
 // 4. DOM操作,影响外部环境, 非纯
 
+// 改造后的代码
 /*
 const createKeywordSearchRenderer = (getKeyword, showLoading, fetchList) => e => { // 取决于输入，可转为纯函数
   const keyword = getKeyword(e)
   const loading = {
     text: '加载中',
-    timeout: 50000
+    timeout: 5000
   }
   showLoading(loading)
   const response = fetchList(keyword)
@@ -84,12 +85,13 @@ const searchByKeyword = flow(
   html => document.getElementById('result').innerHTML = html
 )
 
-const testReaderer = createKeywordSearchRenderer(
+// 单元测试
+const testRenderer = createKeywordSearchRenderer(
   property("value"),
   noop,
   constant(["foo", "bar"])
 )
 
-const resultHTML = testReaderer({value: "test"});
+const resultHTML = testRenderer({value: "test"});
 expect(resultHTML).to.equal(...)
  */
