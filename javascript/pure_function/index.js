@@ -36,3 +36,60 @@ for (const ref of defaultBranches) {
   localStorage.set(repo, encodeURIComponent(ref.name))
 }
 */
+
+// $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+// 案例2：
+// 改造前代码：
+/*
+const searchByKeyword = async e => {
+  const keyword = e.target.value; // keyword 由用户输入决定，有可变性，非纯
+  const loading = {
+    text: '加载中',
+    timeout: 5000
+  };
+  showLoading(loading); // showLoading 的调用没有返回值，非纯
+  const response = await api.fetchListByKeyword(keyword); // 异步： 非纯
+  const list = response.data.map(...);
+  const html = list.map(...);
+  document.getElementById("result").innerHTML = html; // DOM操作,影响外部环境, 非纯
+}
+*/
+// 当前代码存在的问题：
+// 1. keyword 由用户输入决定，有可变性，非纯
+// 2. showLoading 的调用没有返回值，非纯
+// 3. 异步： 非纯
+// 4. DOM操作,影响外部环境, 非纯
+
+/*
+const createKeywordSearchRenderer = (getKeyword, showLoading, fetchList) => e => { // 取决于输入，可转为纯函数
+  const keyword = getKeyword(e)
+  const loading = {
+    text: '加载中',
+    timeout: 50000
+  }
+  showLoading(loading)
+  const response = fetchList(keyword)
+  const list = response.data.map(...)
+  const html = list.map(...)
+  return html;
+}
+
+const searchByKeyword = flow(
+  createKeywordSearchRenderer(
+    e => e.target.value,
+    showLoading,
+    api.fetchListByKeyword.bind(api)
+  ),
+  html => document.getElementById('result').innerHTML = html
+)
+
+const testReaderer = createKeywordSearchRenderer(
+  property("value"),
+  noop,
+  constant(["foo", "bar"])
+)
+
+const resultHTML = testReaderer({value: "test"});
+expect(resultHTML).to.equal(...)
+ */
