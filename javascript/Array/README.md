@@ -19,6 +19,7 @@
 ### ES6
 * find
 * fill
+* findIndex
 
 ## Array 待实现方法
 
@@ -33,7 +34,6 @@
 * from (static)
 * of (static)
 * copyWithin
-* findIndex
 * entries
 * keys
 * values
