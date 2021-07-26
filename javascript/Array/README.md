@@ -20,6 +20,8 @@
 * find
 * fill
 * findIndex
+* Array.from (static)
+
 
 ## Array 待实现方法
 
@@ -31,7 +33,6 @@
 * valueOf
 
 ### ES6(es 2015)
-* from (static)
 * of (static)
 * copyWithin
 * entries
