@@ -24,6 +24,7 @@
 * fill
 * findIndex
 * Array.from (static)
+* includes
 
 
 ## Array 待实现方法
@@ -34,6 +35,5 @@
 
 ### ES6(es 2015)
 * copyWithin
-* includes
 * flat
 * flatMap
