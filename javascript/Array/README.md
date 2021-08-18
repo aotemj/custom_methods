@@ -15,6 +15,9 @@
 * sort
 * splice
 * unshift
+* toString
+* of (static)
+
 
 ### ES6
 * find
@@ -27,17 +30,10 @@
 
 ### ES5(es2009)
 * reduce
-* toSource
-* toString
 * toLocaleString
-* valueOf
 
 ### ES6(es 2015)
-* of (static)
 * copyWithin
-* entries
-* keys
-* values
 * includes
 * flat
 * flatMap
