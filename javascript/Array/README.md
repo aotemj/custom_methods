@@ -17,6 +17,7 @@
 * unshift
 * toString
 * of (static)
+* reduce
 
 
 ### ES6
@@ -30,7 +31,6 @@
 ## Array 待实现方法
 
 ### ES5(es2009)
-* reduce
 * toLocaleString
 
 ### ES6(es 2015)
