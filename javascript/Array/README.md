@@ -18,6 +18,7 @@
 * toString
 * of (static)
 * reduce
+* toLocaleString
 
 
 ### ES6
@@ -31,7 +32,6 @@
 ## Array 待实现方法
 
 ### ES5(es2009)
-* toLocaleString
 
 ### ES6(es 2015)
 * copyWithin
