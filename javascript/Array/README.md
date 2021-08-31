@@ -19,6 +19,7 @@
 * of (static)
 * reduce
 * toLocaleString
+* copyWithin
 
 
 ### ES6
@@ -34,6 +35,5 @@
 ### ES5(es2009)
 
 ### ES6(es 2015)
-* copyWithin
 * flat
 * flatMap
