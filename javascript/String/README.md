@@ -1,5 +1,4 @@
 # 待实现方法
-* charAt
 * charCodeAt
 * concat 
 * endsWith
@@ -33,3 +32,5 @@
 * trimStart
 * valueOf
 # 已实现方法
+* charAt
+
