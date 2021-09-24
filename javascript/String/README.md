@@ -1,6 +1,5 @@
 # 待实现方法
 * charCodeAt
-* concat 
 * endsWith
 * fontsize
 * String.fromCharCode
@@ -33,4 +32,5 @@
 * valueOf
 # 已实现方法
 * charAt
+* concat 
 
