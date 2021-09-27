@@ -1,10 +1,8 @@
 # 待实现方法
 * charCodeAt
-* endsWith
 * fontsize
 * String.fromCharCode
 * String.fromCodePoint
-* includes
 * indexOf
 * lastIndexOf
 * localeCompare
@@ -32,5 +30,10 @@
 * valueOf
 # 已实现方法
 * charAt
-* concat 
+* concat
+* endsWith
+* includes
+
+
+
 
